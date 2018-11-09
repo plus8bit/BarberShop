@@ -25,7 +25,9 @@ get '/visit' do
 end
 
 post '/visit' do
-	
+	c = Client.new params[:client]
+	c.save
+	erb "Thank you for your appointment with us."
 end
 
 
